@@ -1,3 +1,9 @@
+# Credits:
+# 1. Aditya Bhattacharya (github: /AdityaBhattacharya1)
+# 2. Garv Sachdev (github: /gavkujo)
+# =====================================================
+# Indent system: 5 spaces (sacrilege)
+
 import discord
 import os
 import random
@@ -7,12 +13,6 @@ import re
 client = discord.Client()
 
 pattern = '(electrical)(?! (engineering|engg))|sus|amogus|gus(?! (fring|fing|jhonson))|imposter|vent|us$|bay$|crewmate|baka'
-# pattern2 = 's+us$|amogus+|g us|imposter|electrical|vent|us$|electrical|bay$|crewmate|baka'
-
-# sus_words = [
-#     "sus", "among us", "imposter", "amogus", "crewmate", "vent", "potatus",
-#     "colombus", "dishus", "eeshus", "electrical", "med bay"
-# ]
 
 
 @client.event
@@ -21,8 +21,6 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-        # hamburger cheese burger big mac whopper
-  # number 15 burger king foot lettuce. the last thing you want in your burger king burger is someone's foot fungus.
         # fold the below code, if you want a clean file.
     easter_eggs = {
         "dude random": "dude random is the best fucking youtuber seriously man wth. <:yoyo:838836197055922177> <:dadude:838834466289090640>",
@@ -53,11 +51,11 @@ async def on_message(message):
   "china": "⣿⣿⣿⣿⣿⠟⠋⠄⠄⠄⠄⠄⠄⠄⢁⠈⢻⢿⣿⣿⣿⣿⣿⣿⣿ ⣿⣿⣿⣿⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⡀⠭⢿⣿⣿⣿⣿ ⣿⣿⣿⣿⡟⠄⢀⣾⣿⣿⣿⣷⣶⣿⣷⣶⣶⡆⠄⠄⠄⣿⣿⣿⣿ ⣿⣿⣿⣿⡇⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠄⠄⢸⣿⣿⣿⣿ ⣿⣿⣿⣿⣇⣼⣿⣿⠿⠶⠙⣿⡟⠡⣴⣿⣽⣿⣧⠄⢸⣿⣿⣿⣿ ⣿⣿⣿⣿⣿⣾⣿⣿⣟⣭⣾⣿⣷⣶⣶⣴⣶⣿⣿⢄⣿⣿⣿⣿⣿ ⣿⣿⣿⣿⣿⣿⣿⣿⡟⣩⣿⣿⣿⡏⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ⣿⣿⣿⣿⣿⣿⣹⡋⠘⠷⣦⣀⣠⡶⠁⠈⠁⠄⣿⣿⣿⣿⣿⣿⣿ ⣿⣿⣿⣿⣿⣿⣍⠃⣴⣶⡔⠒⠄⣠⢀⠄⠄⠄⡨⣿⣿⣿⣿⣿⣿ ⣿⣿⣿⣿⣿⣿⣿⣦⡘⠿⣷⣿⠿⠟⠃⠄⠄⣠⡇⠈⠻⣿⣿⣿⣿ ⣿⣿⣿⣿⡿⠟⠋⢁⣷⣠⠄⠄⠄⠄⣀⣠⣾⡟⠄⠄⠄⠄⠉⠙⠻ ⡿⠟⠋⠁⠄⠄⠄⢸⣿⣿⡯⢓⣴⣾⣿⣿⡟⠄⠄⠄⠄⠄⠄⠄⠄ ⠄⠄⠄⠄⠄⠄⠄⣿⡟⣷⠄⠹⣿⣿⣿⡿⠁⠄⠄⠄⠄⠄⠄⠄⠄ ⠄⠄⠄⠄⠄⠄⣸⣿⡷⡇⠄⣴⣾⣿⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄ ⠄⠄⠄⠄⠄⠄⣿⣿⠃⣦⣄⣿⣿⣿⠇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄ ⠄⠄⠄⠄⠄⢸⣿⠗⢈⡶⣷⣿⣿⡏⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄",
 
 }
-# guild id: 838803234390802513 (just in case)
-#big ass dictionary ^^
 
     amogus_copypasta = ["It’s just a sussy baka and it cannot be that bad. I’m feeling like👹imposter👹I might just be a monster😨😨😨Feeling ☺️kinda crew...😳Got many tasks🔨🔦🔌To do🤨🤨", "This game has ruined my fucking life. I'm going to end it and take you all with me because I can't bear to look at anything anymore. Any shape I see is distorted into amogus, any time I hear the word suspicious, sus, task, vent, report, ANYTHING, human pattern recognition turns it into amogus. I close my eyes and i see amogus, i see jerma985 grinning as the gates of my soul are opened by amogus and I can feel the festering sclunge of words and shapes pour in, filling all that I am with the ringing noise of amogus", "‼️‼️HOLY FUCKING 🖕👦 SHIT‼️‼️‼️‼️ IS THAT A MOTHERFUCKING 👩💞 AMONG 💰 US 🇺🇸 REFERENCE??????!!!!!!!!!!11!1!1!1!1!1!1 😱! 😱😱😱😱😱😱😱 AMONG 💑👨‍❤️‍👨👩‍❤️‍👩 US 👨 IS THE BEST 👌💯 FUCKING 💦🍆👀 GAME 🎮 🔥🔥🔥🔥💯💯💯💯 RED 🔴 IS SO SUSSSSS 🕵️🕵️🕵️🕵️🕵️🕵️🕵️🟥🟥🟥🟥🟥 COME 💦🏃🏃‍♀️ TO MEDBAY AND WATCH 👀 ME SCAN 👀 🏥🏥🏥🏥🏥🏥🏥🏥 🏥🏥🏥🏥 WHY 😡🤔 IS NO ⚠🚫 ONE 1️⃣ FIXING 👾 O2 🅾 🤬😡🤬😡🤬😡🤬🤬😡🤬🤬😡 OH 🙀 YOUR 👉 CREWMATE? NAME 📛 EVERY 💯 TASK 📋 🔫😠🔫😠🔫😠🔫😠🔫😠 Where Any sus!❓ ❓ Where!❓ ❓ Where! Any sus!❓ Where! ❓ Any sus!❓ ❓ Any sus 🌈🏳️‍🌈! ❓ ❓ ❓ ❓ Where!Where!Where! Any sus!Where!Any sus 🌈🏳️‍🌈 Where!❓ Where! ❓ Where!Any sus❓ ❓ Any sus 💦! ❓ ❓ ❓ ❓ ❓ ❓ Where! ❓ Where! ❓ Any sus!❓ ❓ ❓ ❓ Any sus 🌈🏳️‍🌈! ❓ ❓ Where!❓ Any sus 💦! ❓ ❓ Where!❓ ❓ Where! ❓ Where!Where! ❓ ❓ ❓ ❓ ❓ ❓ ❓ Any sus!❓ ❓ ❓ Any sus!❓ ❓ ❓ ❓ Where! ❓ Where! Where!Any sus!Where! Where! ❓ ❓ ❓ ❓ ❓ ❓ I 👥 think 🤔 it was purple!👀👀👀👀👀👀👀👀👀👀It wasnt me I 👁 was in vents!!!!!!!!!!!!!!😂🤣😂🤣😂🤣😂😂😂🤣🤣🤣😂😂😂", "It seems like the more I (13 M) play Amongus, the more my family tries to embaras me. The other day, I overheard my dad (49 M) say that he needed to 'complete tasks' while working at home😯🤬 don't worry it gets worse. Then I hear my Mom (42 F) say that the amount of time I spend on my computer is 'suspiscios.' Ummm ok so (#1) ur too good to say 'sus' 🤔 and (#2) u dont even play amogus??? 😂😂😂. Even my moms work friend (28 M or somthing idk) came over yesterday to 'look at her vents' I'm not even making this up 🙄🙄🙄 But then the worse part😑 every sunday my granpa (69 M) comes over. He reminisces about his 'Crewmates' from his Navy days and apparently a few of them died so u cry about it at dinner? Just start a new game FFS 😆 but he's lying so uhhh we get it bro: u just want attention 😯😅🤣The problem is NONE of them even Play Omungus. How do i tell em that being a poser is a cringe Brie Larson unholesome Black History Month anti-chungus move?", "📮📮 📮 📮 📮📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮📮 📮📮📮 📮📮 OMG GUYS🤯🤯🤯!!!! THE MAILBOX IS AN IMPOSTER📮😂🤣🤣🤣😳!!! HE IS SO SUS!!!! (THIS IS A REFERENCE TO THE POPULAR MOBIL AND COMPUTER GAMG AMONG US) 🤣🤣😳😳😂😂😂😂😝😝😝📮😳", "I am a concerned mother with a 13 year old child and I am here to seek help regarding my son. Last week when we went to the supermarket, my son pointed to a red trash can and started jumping around screaming “THAT’S AMONG US! THAT TRASH CAN IS SUS! RED IS THE IMPOSTOR!” As soon as he did that, the manager told us to leave. I told him that my son is just excited about something, and apologised. But the manager still told us to leave so I picked up the red trash can that my son was going crazy over and threw it on the managers head. Then my son shouted “DEAD BODY REPORTED.” Can someone please tell me what on earth is wrong with him?"]
 
+	# Check if previous message is made by the bot.
+	# If so, return out of function in order to not detect sus words
     if message.author == client.user:
         return
 	
