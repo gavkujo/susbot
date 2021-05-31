@@ -4,13 +4,13 @@
 # =====================================================
 # Indent system: 5 spaces (sacrilege)
 
-import discord
 import os
 import random
 import re
-from os.path import join, dirname
-from dotenv import load_dotenv
+from os.path import dirname, join
 
+import discord
+from dotenv import load_dotenv
 
 client = discord.Client()
 
@@ -34,8 +34,8 @@ async def on_ready():
 async def on_message(message):
     # fold the below code, if you want a clean file. Contains dictionary of easter eggs
     easter_eggs = {
-        "dude random": """dude random is the best fucking youtuber seriously man wth. <:yoyo:838836197055922177> <:dadude:838834466289090640>""",
-        "suketu patni gaming": """suketu pati gayming channel hits 69420 billion subscibers !!!!!1!1111!111 <:hmm:838812033759707176><:hmm:838812033759707176><:hmm:838812033759707176>""",
+        "dude random": "dude random is the best fucking youtuber seriously man wth. <:yoyo:838836197055922177> <:dadude:838834466289090640>",
+        "suketu patni gaming": "suketu pati gayming channel hits 69420 billion subscibers !!!!!1!1111!111 <:hmm:838812033759707176><:hmm:838812033759707176><:hmm:838812033759707176>",
         "anhad": "lionl anhdad fotnite gaying channel hit 69 subs!!! <:op:844131961949388841><:op:844131961949388841><:op:844131961949388841>",
         "jaggu": "jaggu bandar is so mast kalandar that he committed mass genocide <:colgate:844166443583275019>",
         "jediporg": "jihadi p**n barah suprmacy !!!1!1111 katihar chalenge ;) ;) karachi boizzzzzzzzzzz <:mishbadababy:838806751188484167><:mishbadababy:838806751188484167><:convertible:845722150789971988><:convertible:845722150789971988>",
