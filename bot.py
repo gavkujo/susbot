@@ -79,6 +79,11 @@ class Susbot:
             return
 
         if re.search(pattern, message.content.lower()):
+          dc += 1
+          if dc >= 2:
+            await message.channel.send(amogus_copypasta[random.randint(1, len(amogus_copypasta) - 1)])
+            dc = 0
+          else:
             await message.channel.send(amogus_copypasta[random.randint(1, len(amogus_copypasta) - 1)])
 
         for key, value in easter_eggs.items():
