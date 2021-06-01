@@ -5,9 +5,9 @@
 # Indent system: 4 spaces (= 1 tab). Peace is among us.
 
 import os
+from os.path import dirname, join
 import random
 import re
-from os.path import dirname, join
 
 import discord
 from dotenv import load_dotenv
@@ -34,7 +34,7 @@ class Susbot:
         print(f"We have logged in as {client.user}")
 
     @client.event
-    async def on_message(message: str):
+    async def on_message(message: str) -> None:
 
         easter_eggs = {
             "dude random": "dude random is the best fucking youtuber seriously man wth. <:yoyo:838836197055922177> <:dadude:838834466289090640>",
@@ -76,8 +76,6 @@ class Susbot:
             "📮📮 📮 📮 📮📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮📮 📮📮📮 📮📮 OMG GUYS🤯🤯🤯!!!! THE MAILBOX IS AN IMPOSTER📮😂🤣🤣🤣😳!!! HE IS SO SUS!!!! (THIS IS A REFERENCE TO THE POPULAR MOBIL AND COMPUTER GAMG AMONG US) 🤣🤣😳😳😂😂😂😂😝😝😝📮😳",
             "I am a concerned mother with a 13 year old child and I am here to seek help regarding my son. Last week when we went to the supermarket, my son pointed to a red trash can and started jumping around screaming “THAT’S AMONG US! THAT TRASH CAN IS SUS! RED IS THE IMPOSTOR!” As soon as he did that, the manager told us to leave. I told him that my son is just excited about something, and apologised. But the manager still told us to leave so I picked up the red trash can that my son was going crazy over and threw it on the managers head. Then my son shouted “DEAD BODY REPORTED.” Can someone please tell me what on earth is wrong with him?",
         ]
-
-        dc = 0
 
         if message.author == client.user:
             return
