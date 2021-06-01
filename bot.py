@@ -17,6 +17,8 @@ client = discord.Client()
 dotenv_path = join(dirname(__file__), ".env")
 load_dotenv(dotenv_path)
 DISCORD_TOKEN = os.environ.get("DISCORD_TOKEN")
+
+
 pattern = (
     "(electrical)(?! (engineering|engg))|sus|amogus|gus(?! (fring|fing|johnson))|imposter|vent|us$|bay$|crewmate|baka"
 )
@@ -75,15 +77,12 @@ class Susbot:
             "I am a concerned mother with a 13 year old child and I am here to seek help regarding my son. Last week when we went to the supermarket, my son pointed to a red trash can and started jumping around screaming “THAT’S AMONG US! THAT TRASH CAN IS SUS! RED IS THE IMPOSTOR!” As soon as he did that, the manager told us to leave. I told him that my son is just excited about something, and apologised. But the manager still told us to leave so I picked up the red trash can that my son was going crazy over and threw it on the managers head. Then my son shouted “DEAD BODY REPORTED.” Can someone please tell me what on earth is wrong with him?",
         ]
 
+        dc = 0
+
         if message.author == client.user:
             return
 
         if re.search(pattern, message.content.lower()):
-          dc += 1
-          if dc >= 2:
-            await message.channel.send(amogus_copypasta[random.randint(1, len(amogus_copypasta) - 1)])
-            dc = 0
-          else:
             await message.channel.send(amogus_copypasta[random.randint(1, len(amogus_copypasta) - 1)])
 
         for key, value in easter_eggs.items():
