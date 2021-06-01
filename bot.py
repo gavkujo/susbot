@@ -23,16 +23,16 @@ pattern = (
 
 
 class Susbot:
-    def __init__(self, pattern, token) -> None:
+    def __init__(self, pattern: str, token: str) -> None:
         self.pattern = pattern
         self.token = token
 
     @client.event
-    async def on_ready():
+    async def on_ready() -> None:
         print(f"We have logged in as {client.user}")
 
     @client.event
-    async def on_message(message):
+    async def on_message(message: str):
 
         easter_eggs = {
             "dude random": "dude random is the best fucking youtuber seriously man wth. <:yoyo:838836197055922177> <:dadude:838834466289090640>",
