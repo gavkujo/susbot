@@ -3,7 +3,7 @@
 # 2. Garv Sachdev (github: /gavkujo)
 # =====================================================
 # Indent system: 4 spaces (= 1 tab). Peace is among us.
-# TODO: Sus word list and easter eggs dictionary have appaling formatting. Have to salvage it.
+
 
 import os
 from os.path import dirname, join
@@ -103,7 +103,7 @@ Enjoy your normie life as winbloats user while my GNU/Linux runs a helicopter on
         if re.search(pattern, message.content.lower()):
             await message.channel.send(amogus_copypasta[random.randint(1, len(amogus_copypasta) - 1)])
 
-        # if re.match returns None (there is no match), there will be an attrib error. This is to prevent that.
+        # if re.search returns None (there is no match), there will be an attrib error. This is to prevent that.
         try:
             res = re.search(pattern2, message.content.lower()).group(0)
             await message.channel.send(easter_eggs[res])
