@@ -77,15 +77,28 @@ class Susbot:
             "I am a concerned mother with a 13 year old child and I am here to seek help regarding my son. Last week when we went to the supermarket, my son pointed to a red trash can and started jumping around screaming “THAT’S AMONG US! THAT TRASH CAN IS SUS! RED IS THE IMPOSTOR!” As soon as he did that, the manager told us to leave. I told him that my son is just excited about something, and apologised. But the manager still told us to leave so I picked up the red trash can that my son was going crazy over and threw it on the managers head. Then my son shouted “DEAD BODY REPORTED.” Can someone please tell me what on earth is wrong with him?",
         ]
 
+        detections_list = []
+        separator = "|"
+
+        # programmatically create a regex with all the keys in the following manner: "key1|key2|key3..."
+
+        for key in easter_eggs.keys():
+            detections_list.append(key)
+            pattern2 = separator.join(detections_list)
+
         if message.author == client.user:
             return
 
         if re.search(pattern, message.content.lower()):
             await message.channel.send(amogus_copypasta[random.randint(1, len(amogus_copypasta) - 1)])
 
-        for key, value in easter_eggs.items():
-            if key in message.content.lower():
-                await message.channel.send(value)
+        # if re.match returns None (there is no match), there will be an attrib error. This is to prevent that.
+        try:
+            res = re.match(pattern2, message.content.lower()).group(0)
+            await message.channel.send(easter_eggs[res])
+
+        except AttributeError:
+            return
 
 
 susbot = Susbot(pattern, DISCORD_TOKEN)
