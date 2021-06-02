@@ -94,7 +94,8 @@ Enjoy your normie life as winbloats user while my GNU/Linux runs a helicopter on
 
         for key in easter_eggs.keys():
             detections_list.append(key)
-            pattern2 = separator.join(detections_list)
+
+        pattern2 = separator.join(detections_list)
 
         if message.author == client.user:
             return
@@ -104,7 +105,7 @@ Enjoy your normie life as winbloats user while my GNU/Linux runs a helicopter on
 
         # if re.match returns None (there is no match), there will be an attrib error. This is to prevent that.
         try:
-            res = re.match(pattern2, message.content.lower()).group(0)
+            res = re.search(pattern2, message.content.lower()).group(0)
             await message.channel.send(easter_eggs[res])
 
         except AttributeError:
