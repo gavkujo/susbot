@@ -39,8 +39,8 @@ class Susbot:
 
         easter_eggs = {
             "dude random": "dude random is the best fucking youtuber seriously man wth. <:yoyo:838836197055922177> <:dadude:838834466289090640>",
-            "suketu patni gaming": "suketu pati gayming channel hits 69420 billion subscibers !!!!!1!1111!111 <:hmm:838812033759707176><:hmm:838812033759707176><:hmm:838812033759707176>",
-            "anhad": "lionl anhdad fotnite gaying channel hit 69 subs!!! <:op:844131961949388841><:op:844131961949388841><:op:844131961949388841>",
+            "suketu patni gaming": f"suketu pati gayming channel hits 69420 billion subscibers !!!!!1!1111!111 {'<:hmm:838812033759707176>' * 3}",
+            "anhad": f"lionl anhdad fotnite gaying channel hit 69 subs!!! {'<:op:844131961949388841>' * 3 }",
             "jaggu": "jaggu bandar is so mast kalandar that he committed mass genocide <:colgate:844166443583275019>",
             "jediporg": "jihadi p**n barah suprmacy !!!1!1111 katihar chalenge ;) ;) karachi boizzzzzzzzzzz <:mishbadababy:838806751188484167><:mishbadababy:838806751188484167><:convertible:845722150789971988><:convertible:845722150789971988>",
             "mighty raju": "maity raju supremacy. M SE HOTA HAI MAITY R SE HOTA HAI RAJU RAJU RAJU RAJu <:shaktiman:844258104299225118><:shaktiman:844258104299225118><:shaktiman:844258104299225118>",
@@ -48,7 +48,7 @@ class Susbot:
             "chutki": "chutki is fucking cringe. she is the most generic fucking character ive ever seen.",
             "tun": "devy and shifa we are still waiting on the om x dholu fanfic <:eboy:844132023224107018>",
             "dio": "joseph is better stfu ",
-            "dutta": "man when are you gon fight with disha again. we are seriously looking forward to the next fight <:technically:847106049935671357><:technically:847106049935671357>",
+            "dutta": f"man when are you gon fight with disha again. we are seriously looking forward to the next fight {'<:technically:847106049935671357>' * 3}",
             "unplayable": "ffs if you say that again i will steal one of your terracotta elephants",
             "roy": "man black ops 1 is such a cringe game i uninstalled it bcoz there was an amogus reference in the game <:trollge:845728232119730186>",
             "dholu": "<:dukh:844185997678870559><:dard:844131868190048267>",
