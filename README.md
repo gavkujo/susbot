@@ -12,7 +12,7 @@
 ## Features
 - [x] Annoying
 - [x] Sus
-- [x] Among us 
+- [x] Amogus 
 
 ## To Clone
 ```sh
