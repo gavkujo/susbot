@@ -22,11 +22,11 @@ pip install -r requirements.txt
 
 ## Usage
 
-To set up the bot, first you will need a **discord bot token**. [You can refer to this link for getting your own token](https://www.writebots.com/discord-bot-token/).
+To set up the bot, first you will need a **discord bot token**. [You can refer to this article for getting your own token](https://www.writebots.com/discord-bot-token/).
 
 Then, create a `.env` file in the root folder of the bot and create a new environmental variable `DISCORD_TOKEN` for the bot token. You can refer to `.example.env` for the format.
 
-Finally run:
+Finally, run:
 
 ```sh
 python ./bot.py
