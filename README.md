@@ -7,7 +7,8 @@
 </p>
 
 > SusBot is a discord bot that catches among us references. <br />
-> Ever wanted to be flooded by among us copypasta for whatever reason? This is your solution.
+> Ever wanted to be flooded by among us copypasta for whatever reason? This is your solution. <br />
+> (easter eggs included)
 
 ## Features
 - [x] Annoying
