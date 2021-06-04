@@ -7,15 +7,16 @@
 </p>
 
 > SusBot is a discord bot that catches among us references. <br />
-> Ever wanted to be flooded by among us copypasta for whatever reason? This is your solution. <br />
-> (easter eggs included)
+> Ever wanted to be flooded by among us copypasta (and a few easter eggs) for whatever reason? This is your solution. <br />
 
 ## Features
-- [x] Annoying
-- [x] Sus
-- [x] Amogus 
+
+-   [x] Annoying
+-   [x] Sus
+-   [x] Amogus
 
 ## To Clone
+
 ```sh
 git clone https://github.com/gavkujo/susbot.git
 pip install -r requirements.txt
@@ -42,6 +43,5 @@ python ./bot.py
 
 👤 **Garv Sachdev**
 <br />
+
 -   Github: [@gavkujo](https://github.com/gavkujo)
-
-

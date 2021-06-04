@@ -3,12 +3,14 @@
 # 2. Garv Sachdev (github: /gavkujo)
 # =====================================================
 # Indent system: 4 spaces (= 1 tab). Peace is among us.
+# TODO: add better type hinting for variables
 
 
 import os
 from os.path import dirname, join
 import random
 import re
+from typing import Match, List, Dict
 
 import discord
 from dotenv import load_dotenv
@@ -20,7 +22,7 @@ load_dotenv(dotenv_path)
 DISCORD_TOKEN = os.environ.get("DISCORD_TOKEN")
 
 
-pattern = (
+pattern: str = (
     "(electrical)(?! (engineering|engg))|sus|amogus|gus(?! (fring|fing|johnson))|imposter|vent|us$|bay$|crewmate|baka"
 )
 
@@ -36,7 +38,14 @@ class Susbot:
 
     @client.event
     async def on_message(message: str) -> None:
+        def generate_regex(dict: Dict[str, str], list: List[str]) -> None:
+            for key in dict.keys():
+                list.append(key)
 
+        def regex_matcher(pattern: str) -> Match:
+            return re.search(pattern, message.content.lower()).group(0)
+
+        # NOTE: formatting the following list and dicts will mess with the whitespace of the final message sent.
         easter_eggs = {
             "dude random": "dude random is the best fucking youtuber seriously man wth. <:yoyo:838836197055922177> <:dadude:838834466289090640>",
             "suketu patni gaming": f"suketu pati gayming channel hits 69420 billion subscibers !!!!!1!1111!111 {'<:hmm:838812033759707176>' * 3}",
@@ -77,7 +86,7 @@ Enjoy your normie life as winbloats user while my GNU/Linux runs a helicopter on
             "dirty deeds done dirt cheap": "Suppose that you were sitting down at this table. The napkins are in front of you, which napkin would you take? The one on your ‘left’? Or the one on your ‘right’? The one on your left side? Or the one on your right side? Usually you would take the one on your left side. That is ‘correct’ too. But in a larger sense on society, that is wrong. Perhaps I could even substitute ‘society’ with the ‘Universe’. The correct answer is that ‘It is determined by the one who takes his or her own napkin first.’ …Yes? If the first one takes the napkin to their right, then there’s no choice but for others to also take the ‘right’ napkin. The same goes for the left. Everyone else will take the napkin to their left, because they have no other option. This is ‘society’… Who are the ones that determine the price of land first? There must have been someone who determined the value of money, first. The size of the rails on a train track? The magnitude of electricity? Laws and Regulations? Who was the first to determine these things? Did we all do it, because this is a Republic? Or was it Arbitrary? NO! The one who took the napkin first determined all of these things! The rules of this world are determined by that same principle of ‘right or left?’! In a Society like this table, a state of equilibrium, once one makes the first move, everyone must follow! In every era, this World has been operating by this napkin principle. And the one who ‘takes the napkin first’ must be someone who is respected by all. It’s not that anyone can fulfill this role… Those that are despotic or unworthy will be scorned. And those are the ‘losers’. In the case of this table, the ‘eldest’ or the ‘Master of the party’ will take the napkin first… Because everyone ‘respects’ those individuals.",
         }
 
-        amogus_copypasta = [
+        amogus_copypasta: List[str] = [
             "It’s just a sussy baka and it cannot be that bad. I’m feeling like👹imposter👹I might just be a monster😨😨😨Feeling ☺️kinda crew...😳Got many tasks🔨🔦🔌To do🤨🤨",
             "This game has ruined my fucking life. I'm going to end it and take you all with me because I can't bear to look at anything anymore. Any shape I see is distorted into amogus, any time I hear the word suspicious, sus, task, vent, report, ANYTHING, human pattern recognition turns it into amogus. I close my eyes and i see amogus, i see jerma985 grinning as the gates of my soul are opened by amogus and I can feel the festering sclunge of words and shapes pour in, filling all that I am with the ringing noise of amogus",
             "‼️‼️HOLY FUCKING 🖕👦 SHIT‼️‼️‼️‼️ IS THAT A MOTHERFUCKING 👩💞 AMONG 💰 US 🇺🇸 REFERENCE??????!!!!!!!!!!11!1!1!1!1!1!1 😱! 😱😱😱😱😱😱😱 AMONG 💑👨‍❤️‍👨👩‍❤️‍👩 US 👨 IS THE BEST 👌💯 FUCKING 💦🍆👀 GAME 🎮 🔥🔥🔥🔥💯💯💯💯 RED 🔴 IS SO SUSSSSS 🕵️🕵️🕵️🕵️🕵️🕵️🕵️🟥🟥🟥🟥🟥 COME 💦🏃🏃‍♀️ TO MEDBAY AND WATCH 👀 ME SCAN 👀 🏥🏥🏥🏥🏥🏥🏥🏥 🏥🏥🏥🏥 WHY 😡🤔 IS NO ⚠🚫 ONE 1️⃣ FIXING 👾 O2 🅾 🤬😡🤬😡🤬😡🤬🤬😡🤬🤬😡 OH 🙀 YOUR 👉 CREWMATE? NAME 📛 EVERY 💯 TASK 📋 🔫😠🔫😠🔫😠🔫😠🔫😠 Where Any sus!❓ ❓ Where!❓ ❓ Where! Any sus!❓ Where! ❓ Any sus!❓ ❓ Any sus 🌈🏳️‍🌈! ❓ ❓ ❓ ❓ Where!Where!Where! Any sus!Where!Any sus 🌈🏳️‍🌈 Where!❓ Where! ❓ Where!Any sus❓ ❓ Any sus 💦! ❓ ❓ ❓ ❓ ❓ ❓ Where! ❓ Where! ❓ Any sus!❓ ❓ ❓ ❓ Any sus 🌈🏳️‍🌈! ❓ ❓ Where!❓ Any sus 💦! ❓ ❓ Where!❓ ❓ Where! ❓ Where!Where! ❓ ❓ ❓ ❓ ❓ ❓ ❓ Any sus!❓ ❓ ❓ Any sus!❓ ❓ ❓ ❓ Where! ❓ Where! Where!Any sus!Where! Where! ❓ ❓ ❓ ❓ ❓ ❓ I 👥 think 🤔 it was purple!👀👀👀👀👀👀👀👀👀👀It wasnt me I 👁 was in vents!!!!!!!!!!!!!!😂🤣😂🤣😂🤣😂😂😂🤣🤣🤣😂😂😂",
@@ -85,17 +94,21 @@ Enjoy your normie life as winbloats user while my GNU/Linux runs a helicopter on
             "📮📮 📮 📮 📮📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮 📮📮 📮📮📮 📮📮 OMG GUYS🤯🤯🤯!!!! THE MAILBOX IS AN IMPOSTER📮😂🤣🤣🤣😳!!! HE IS SO SUS!!!! (THIS IS A REFERENCE TO THE POPULAR MOBIL AND COMPUTER GAMG AMONG US) 🤣🤣😳😳😂😂😂😂😝😝😝📮😳",
             "I am a concerned mother with a 13 year old child and I am here to seek help regarding my son. Last week when we went to the supermarket, my son pointed to a red trash can and started jumping around screaming “THAT’S AMONG US! THAT TRASH CAN IS SUS! RED IS THE IMPOSTOR!” As soon as he did that, the manager told us to leave. I told him that my son is just excited about something, and apologised. But the manager still told us to leave so I picked up the red trash can that my son was going crazy over and threw it on the managers head. Then my son shouted “DEAD BODY REPORTED.” Can someone please tell me what on earth is wrong with him?",
             "My name is Yoshimpostor Amogus. I'm 33 years old. My house is in the northeast section of Electric, where all the wirings are, and I am not sus. I work as a crewmate for the Space Ship, and I get to the cafeteria every day by 8 PM at the latest. I don't sabotage, but I occasionally vent. I'm in Cameras by 11 PM, and make sure I get eight hours of vigilance, no matter what. After having a glass of warm milk and doing about twenty minutes of stretches before going to bed, I usually have no problems sleeping until morning. Just like a crewmate, I wake up without any fatigue or stress in the morning. I was told there were no issues at my last scan. I'm trying to explain that I'm a person who wishes to live a very quiet life. I take care not to trouble myself with any enemies, like winning and losing, that would cause me to lose sleep at night. That is how I deal with socity, and I know that is what brings me happiness. Although, if I were to evict I wouldn't lose to anyone.",
+            "I can't fucking take it. I see an image of a random object posted and then I see it, I fucking see it. \"Oh that looks kinda like the among us guy\" it started as. That's funny, that's a cool reference. But I kept going, I'd see a fridge that looked like among us, I'd see an animated bag of chips that looked like among us, I'd see a hat that looked like among us. And every time I'd burst into an insane, breath deprived laugh staring at the image as the words AMOGUS ran through my head. It's torment, psychological torture, I am being conditioned to laugh maniacly any time I see an oval on a red object. I can't fucking live like this... I can't I can't I can't I can't I can't! And don't get me fucking started on the words! I'll never hear the word suspicious again without thinking of among us. Someone does something bad and I can't say anything other than \"sus.\" I could watch a man murder everyone I love and all I would be able to say is \"red sus\" and laugh like a fucking insane person. And the word \"among\" is ruined. The phrase \"among us\" is ruined. I can't live anymore. Among us has destroyed my fucking life. I want to eject myself from this plane of existence. MAKE IT STOP!",
         ]
 
-        detections_list = []
+        image_easter_eggs: Dict[str, str] = {"dababy": "https://i.imgur.com/ymVKI46.jpg"}
+
+        easter_egg_detections_list = []
+        image_detection_list = []
         separator = "|"
 
         # programmatically create a regex with all the keys in the following manner: "key1|key2|key3..."
+        generate_regex(easter_eggs, easter_egg_detections_list)
+        generate_regex(image_easter_eggs, image_detection_list)
 
-        for key in easter_eggs.keys():
-            detections_list.append(key)
-
-        pattern2 = separator.join(detections_list)
+        pattern2 = separator.join(easter_egg_detections_list)
+        pattern3 = separator.join(image_detection_list)
 
         if message.author == client.user:
             return
@@ -103,10 +116,18 @@ Enjoy your normie life as winbloats user while my GNU/Linux runs a helicopter on
         if re.search(pattern, message.content.lower()):
             await message.channel.send(amogus_copypasta[random.randint(1, len(amogus_copypasta) - 1)])
 
-        # if re.search returns None (there is no match), there will be an attrib error. This is to prevent that.
+        # if re.search returns None (there is no match), there will be an attrib error. These try-excepts are to prevent that.
+        # TODO: clean up this bit.
         try:
-            res = re.search(pattern2, message.content.lower()).group(0)
+            res = regex_matcher(pattern2)
             await message.channel.send(easter_eggs[res])
+
+        except AttributeError:
+            pass
+
+        try:
+            res = regex_matcher(pattern3)
+            await message.channel.send(image_easter_eggs[res])
 
         except AttributeError:
             return
