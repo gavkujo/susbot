@@ -52,7 +52,7 @@ class Susbot:
             "anhad": f"lionl anhdad fotnite gaying channel hit 69 subs!!! {'<:op:844131961949388841>' * 3 }",
             "jaggu": "jaggu bandar is so mast kalandar that he committed mass genocide <:colgate:844166443583275019>",
             "jediporg": "jihadi p**n barah suprmacy !!!1!1111 katihar chalenge ;) ;) karachi boizzzzzzzzzzz <:mishbadababy:838806751188484167><:mishbadababy:838806751188484167><:convertible:845722150789971988><:convertible:845722150789971988>",
-            "mighty raju": "maity raju supremacy. M SE HOTA HAI MAITY R SE HOTA HAI RAJU RAJU RAJU RAJu <:shaktiman:844258104299225118><:shaktiman:844258104299225118><:shaktiman:844258104299225118>",
+            "mighty raju": f"maity raju supremacy. M SE HOTA HAI MAITY R SE HOTA HAI RAJU RAJU RAJU RAJu {'<:shaktiman:844258104299225118>' * 3}",
             "motu": "Motu Patlu: The best anime of all time. I want to shed light onto the uncultured swines who do not know of the Indian anime Motu Patlu. Motu Patlu is a anime with the characters Motu, Patlu and the citizens of their suburban indian residence. Motu is a thicc boy-o who everybody loves because he is motu. Patlu is motu's sidekick who thinks he is such a smarty pants. Motu saves his town from the villanous John the Dohn. John is a stupid bully who picks on motu using india's own professor jhatika's gadjets against motu. Motu always wins because he is best boy-o. Like in many other animes the characters get different forms and motu patlu is no exception. Motu has many forms some including SUPER DOG MAN MOTU!, Onion Motu, Regular Motu and his final form..... He can only enter his final form when he eats a samosa his favorite snack which he eats on a frequent basis. His final form can sent someone 5x his weight flying into space and coming back down to earth! Motu then saves the day (and patlu from danger) while officer Chingnam arrests him and puts him in his jail called the web since Nobody could escape chingnam's web. In conclusion motu patlu has many elements many modern day animes don't have (I'm looking at you richard and mortimer) heart, an unstoppable duo, character arcs and development and who could forget Anime Betrayals. I give this anime 11 samosas out of 10! I am hyped for the next episode of Motu Patlu it's gonna be great!",
             "chutki": "chutki is fucking cringe. she is the most generic fucking character ive ever seen.",
             "tun": "devy and shifa we are still waiting on the om x dholu fanfic <:eboy:844132023224107018>",
@@ -99,8 +99,8 @@ Enjoy your normie life as winbloats user while my GNU/Linux runs a helicopter on
 
         image_easter_eggs: Dict[str, str] = {"dababy": "https://i.imgur.com/ymVKI46.jpg"}
 
-        easter_egg_detections_list = []
-        image_detection_list = []
+        easter_egg_detections_list: List[str] = []
+        image_detection_list: List[str] = []
         separator = "|"
 
         # programmatically create a regex with all the keys in the following manner: "key1|key2|key3..."
@@ -113,24 +113,41 @@ Enjoy your normie life as winbloats user while my GNU/Linux runs a helicopter on
         if message.author == client.user:
             return
 
-        if re.search(pattern, message.content.lower()):
+        # if re.search returns None (there is no match), there will be an attrib error. These try-excepts are to prevent that.
+        try:
+            regex_matcher(pattern)
             await message.channel.send(amogus_copypasta[random.randint(1, len(amogus_copypasta) - 1)])
 
-        # if re.search returns None (there is no match), there will be an attrib error. These try-excepts are to prevent that.
-        # TODO: clean up this bit.
-        try:
-            res = regex_matcher(pattern2)
-            await message.channel.send(easter_eggs[res])
-
         except AttributeError:
-            pass
+            try:
+                await message.channel.send(easter_eggs[regex_matcher(pattern2)])
 
-        try:
-            res = regex_matcher(pattern3)
-            await message.channel.send(image_easter_eggs[res])
+            except AttributeError:
+                try:
+                    await message.channel.send(image_easter_eggs[regex_matcher(pattern3)])
 
-        except AttributeError:
-            return
+                except AttributeError:
+                    return
+
+        # Not a fan of nested try-except blocks? Comment that out and use the following code instead.
+        # try:
+        #     regex_matcher(pattern)
+        #     await message.channel.send(amogus_copypasta[random.randint(1, len(amogus_copypasta) - 1)])
+
+        # except AttributeError:
+        #     pass
+
+        # try:
+        #     await message.channel.send(easter_eggs[regex_matcher(pattern2)])
+
+        # except AttributeError:
+        #     pass
+
+        # try:
+        #     await message.channel.send(image_easter_eggs[regex_matcher(pattern3)])
+
+        # except AttributeError:
+        #     return
 
 
 susbot = Susbot(pattern, DISCORD_TOKEN)
