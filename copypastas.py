@@ -53,4 +53,7 @@ amogus_copypasta: List[str] = [
     "I can't fucking take it. I see an image of a random object posted and then I see it, I fucking see it. \"Oh that looks kinda like the among us guy\" it started as. That's funny, that's a cool reference. But I kept going, I'd see a fridge that looked like among us, I'd see an animated bag of chips that looked like among us, I'd see a hat that looked like among us. And every time I'd burst into an insane, breath deprived laugh staring at the image as the words AMOGUS ran through my head. It's torment, psychological torture, I am being conditioned to laugh maniacly any time I see an oval on a red object. I can't fucking live like this... I can't I can't I can't I can't I can't! And don't get me fucking started on the words! I'll never hear the word suspicious again without thinking of among us. Someone does something bad and I can't say anything other than \"sus.\" I could watch a man murder everyone I love and all I would be able to say is \"red sus\" and laugh like a fucking insane person. And the word \"among\" is ruined. The phrase \"among us\" is ruined. I can't live anymore. Among us has destroyed my fucking life. I want to eject myself from this plane of existence. MAKE IT STOP!",
 ]
 
-image_easter_eggs: Dict[str, str] = {"dababy": "https://i.imgur.com/ymVKI46.jpg"}
+image_easter_eggs: Dict[str, str] = {
+    "dababy": "https://i.imgur.com/ymVKI46.jpg",
+    "stuff": "https://i.redd.it/tvcz6r7q2p371.png",
+}
