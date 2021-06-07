@@ -1,3 +1,4 @@
 secrets.txt
 .env
 .vscode
+__pycache__
