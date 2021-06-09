@@ -56,4 +56,6 @@ amogus_copypasta: List[str] = [
 image_easter_eggs: Dict[str, str] = {
     "dababy": "https://i.imgur.com/ymVKI46.jpg",
     "stuff": "https://i.redd.it/tvcz6r7q2p371.png",
+    "anon": "https://i.kym-cdn.com/photos/images/facebook/001/038/495/f0f.png",
+    "who asked": "https://i.imgur.com/dwJBMBp.jpeg",
 }
