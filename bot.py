@@ -25,7 +25,7 @@ DISCORD_TOKEN = os.environ.get("DISCORD_TOKEN")
 
 
 pattern: str = (
-    "(electrical)(?! (engineering|engg))|sus|amogus|gus(?! (fring|fing|johnson))|imposter|vent|us$|bay$|crewmate|baka"
+    "(electrical)(?! (engineering|engg))|sus|amogus|gus(?! (fring|fing|johnson))|imposter|vent|us$|bay|crewmate|baka"
 )
 
 
