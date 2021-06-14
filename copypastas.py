@@ -59,4 +59,6 @@ image_easter_eggs: Dict[str, str] = {
     "anon": "https://i.kym-cdn.com/photos/images/facebook/001/038/495/f0f.png",
     "who asked": "https://i.imgur.com/dwJBMBp.jpeg",
     "mutahar": "https://i.redd.it/kuqqdjtiyz471.jpg",
+    # warning, the below gif link is NSFW and is only meant as a joke.
+    "boat talks": "https://media.discordapp.net/attachments/838803234390802516/853327866145407036/ezgif.com-gif-maker.gif",
 }
