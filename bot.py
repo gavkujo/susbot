@@ -3,8 +3,6 @@
 # 2. Garv Sachdev (github: /gavkujo)
 # =====================================================
 # Indent system: 4 spaces (= 1 tab). Peace is among us.
-# TODO: add better type hinting for variables
-
 
 import os
 from os.path import dirname, join
